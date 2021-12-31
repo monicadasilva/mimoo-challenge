@@ -8,6 +8,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
+
+  background-color: white;
+
   a {
     color: #3a3a3a;
     padding-left: 20px;
@@ -41,10 +44,8 @@ export const Container = styled.div`
       background: none;
       border: none;
     }
-    position: absolute;
-    bottom: 20px;
+
+    transform: translate(50px, 550px);
     cursor: pointer;
   }
-  position: absolute;
-  background-color: white;
 `;
