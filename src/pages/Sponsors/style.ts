@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const AnimationBox = styled.div`
+export const Content = styled.div`
   flex: 1;
 
   display: flex;
@@ -25,19 +25,24 @@ export const AnimationBox = styled.div`
   div:nth-child(1) {
     font-size: 1.1rem;
     font-weight: 600;
-
-    width: 250px;
+    width: 350px;
 
     align-self: flex-start;
     position: absolute;
-    transform: translate(50px, -120px);
+    transform: translate(50px, -43px);
 
+    .icon {
+      width: 20px;
+      height: 15px;
+      margin-right: 15px;
+    }
     a {
       color: black;
       cursor: pointer;
+      line-height: 1.5rem;
     }
 
-    p:nth-child(n) {
+    .ant-breadcrumb {
       font-size: 0.7rem;
       font-weight: lighter;
       line-height: 1.5rem;

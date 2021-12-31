@@ -1,13 +1,11 @@
 import "antd/dist/antd.css";
 import { Form, Input, Button } from "antd";
 import { Container, Recovery } from "./style";
-// import { useAuth } from "../../context/Auth";
 import { useNavigate } from "react-router-dom";
 import { DataForm } from "../../types/AuthContext";
 import { useState } from "react";
 
 export const LoginForm = () => {
-  // const { setToken } = useAuth();
   const [passwordRecovery, setPasswordRecovery] = useState(true);
 
   const navigate = useNavigate();

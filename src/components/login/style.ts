@@ -53,12 +53,13 @@ export const Recovery = styled.div`
   h3 {
     font-weight: bold;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
   p {
     font-size: 0.8rem;
+    line-height: 1rem;
   }
   input {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
   }
 `;

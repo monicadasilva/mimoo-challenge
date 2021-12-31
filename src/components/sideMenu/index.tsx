@@ -1,10 +1,9 @@
-import { Container } from "./style";
-
+import { Link } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
-import { GiHistogram, GiSpectacleLenses } from "react-icons/gi";
+import { GiHistogram } from "react-icons/gi";
+import { Container } from "./style";
 import Logo from "../../assets/logo.png";
 import Icon from "../../assets/icon.png";
-import { Link } from "react-router-dom";
 
 export const SidebarMenu = () => {
   return (
@@ -16,10 +15,10 @@ export const SidebarMenu = () => {
       </div>
       <div>
         <img src={Icon} alt="icon" className="icon" />
-        <Link to="/home-user">Patrocinadores</Link>
+        <Link to="/sponsors">Patrocinadores</Link>
       </div>
       <div className="Logout">
-        <button>Unser name</button>
+        <button>unserName</button>
         <FiLogOut />
       </div>
     </Container>
