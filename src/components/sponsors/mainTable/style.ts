@@ -30,4 +30,8 @@ export const Container = styled.div`
       text-align: left;
     } */
   }
+  table tbody tr {
+    color: black;
+    font-weight: 400;
+  }
 `;
