@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 import { SidebarMenu } from "../../components/sideMenu";
 import { MainTable } from "../../components/sponsors/mainTable";
 import { Container, Content } from "./style";
+import { NewSponserInfo } from "../../components/sponsors/addSponsor/generalInfo/indx";
+import { useState } from "react";
 
 export const SponsorsPage = () => {
+  const [addSponsor, setAddSponsor] = useState(false);
+
+  const handleAddSponsor = () => {
+    setAddSponsor(!addSponsor);
+  };
+
   return (
     <Container>
       <SidebarMenu />
       <Content>
-        <div>
+        <div className="header">
           <img src={Icon} alt="icon" className="icon" />
           <Link to="/sponsors">Patrocinadores</Link>
           <Breadcrumb separator=">">
@@ -18,7 +26,8 @@ export const SponsorsPage = () => {
             <Breadcrumb.Item>Cadastro Patrocinador</Breadcrumb.Item>
           </Breadcrumb>
         </div>
-        <MainTable />
+        {!addSponsor && <MainTable handleAddSponsor={handleAddSponsor} />}
+        {addSponsor && <NewSponserInfo />}
       </Content>
     </Container>
   );

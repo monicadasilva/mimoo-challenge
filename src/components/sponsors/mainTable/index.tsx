@@ -1,10 +1,16 @@
-import { Container } from "./style";
+import { Container, TableHead } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getSponsors } from "../../../redux/actions/sponsors";
 import { iSponsorData } from "../../../redux/types";
+import { HiPlus } from "react-icons/hi";
+import { TableDataCard } from "../tableDataCard";
 
-export const MainTable = () => {
+interface iHandler {
+  handleAddSponsor: () => void;
+}
+
+export const MainTable = ({ handleAddSponsor }: iHandler) => {
   const dispatch = useDispatch();
   const sponsorList = useSelector((state: any) => state.sponsors.sponsors);
   const loading = useSelector((state: any) => state.sponsors.loading);
@@ -12,12 +18,12 @@ export const MainTable = () => {
 
   useEffect(() => {
     dispatch(getSponsors());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Container>
       <h3>Patrocinadores</h3>
-      <table>
+      <TableHead>
         <thead>
           <tr>
             <th>Patrocinador</th>
@@ -29,26 +35,28 @@ export const MainTable = () => {
             <th>Status</th>
           </tr>
         </thead>
-        {sponsorList.loading && <p>Carregando . . .</p>}
-        {sponsorList.length > 0 &&
-          sponsorList.map((elem: iSponsorData, index: number) => (
-            <tbody key={index}>
-              <tr>
-                <td>{elem.name}</td>
-                <td>{elem.situation}</td>
-                <td>{elem.certified}</td>
-                <td>{elem.totalBrands}</td>
-                <td>{elem.totalActivedBrands}</td>
-                <td>{elem.lastCampaign}</td>
-                <td>{elem.status}</td>
-              </tr>
-            </tbody>
-          ))}
-        {sponsorList.length === 0 && !loading && (
-          <p>Não há patrocinadores cadastrados.</p>
-        )}
-        {error && !loading && <p>{error}</p>}
-      </table>
+      </TableHead>
+      {sponsorList.loading && <p>Carregando . . .</p>}
+      {sponsorList.length > 0 &&
+        sponsorList.map((elem: iSponsorData, index: number) => (
+          <TableDataCard
+            index={index}
+            name={elem.name}
+            situation={elem.situation}
+            certified={elem.certified}
+            totalBrands={elem.totalBrands}
+            totalActivedBrands={elem.totalActivedBrands}
+            lastCampaign={elem.lastCampaign}
+            status={elem.status}
+          />
+        ))}
+      {sponsorList.length === 0 && !loading && (
+        <p>Não há patrocinadores cadastrados.</p>
+      )}
+      {error && !loading && <p>{error}</p>}
+      <button onClick={handleAddSponsor}>
+        <HiPlus />
+      </button>
     </Container>
   );
 };
