@@ -12,43 +12,31 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   flex: 1;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 
-  h1 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  div:nth-child(1) {
-    font-size: 1.1rem;
-    font-weight: 600;
-    width: 350px;
-
-    align-self: flex-start;
+  position: relative;
+  .header {
     position: absolute;
-    transform: translate(50px, -43px);
-
+    top: 20px;
+    left: -65px;
+    transform: translate(50%, 50%);
     .icon {
-      width: 20px;
-      height: 15px;
-      margin-right: 15px;
-    }
-    a {
-      color: black;
-      cursor: pointer;
-      line-height: 1.5rem;
-    }
-
-    .ant-breadcrumb {
-      font-size: 0.7rem;
-      font-weight: lighter;
-      line-height: 1.5rem;
-    }
-    svg {
+      width: 15px;
       margin-right: 20px;
+    }
+    a:nth-child(2) {
+      color: black;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .ant-breadcrumb {
+      margin-top: 2px;
+      font-size: 0.7rem;
     }
   }
 `;

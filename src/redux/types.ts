@@ -9,6 +9,7 @@ export interface iAction {
 }
 
 export interface iSponsorData {
+  index?: number;
   name: string;
   situation: string;
   certified: boolean;

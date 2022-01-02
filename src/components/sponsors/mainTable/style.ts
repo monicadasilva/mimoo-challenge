@@ -1,37 +1,76 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 90%;
-  height: 600px;
+  width: 750px;
+  height: 500px;
 
   border-radius: 10px;
   background-color: white;
 
   position: relative;
-  transform: translate(0, 10px);
+  transform: translate(0, -35px);
 
   padding: 15px;
 
   h3 {
     font-weight: 600;
-    line-height: 3rem;
+    padding: 10px 0 30px 0;
   }
-  table,
-  tr {
-    font-size: 0.8rem;
-    font-weight: 600;
 
-    color: #b2b2b2;
+  button {
+    position: relative;
+    transform: translate(670px, 70px);
 
-    width: 100%;
+    cursor: pointer;
 
-    /* th:nth-child(1) {
-      width: 200px;
-      text-align: left;
-    } */
+    height: 40px;
+    width: 40px;
+
+    border-radius: 30px;
+    border: none;
+    background-color: #6876f7;
+    color: white;
+
+    ::after {
+      display: none;
+      vertical-align: middle;
+      content: "Adicionar patrocinador";
+
+      font-size: 0.8rem;
+    }
+    :hover {
+      ::after {
+        display: initial;
+      }
+      font-size: 1.5rem;
+      transform: translate(525px, 70px);
+      width: 190px;
+      svg {
+        width: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
   }
-  table tbody tr {
-    color: black;
-    font-weight: 400;
+`;
+
+export const TableHead = styled.table`
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  color: #b2b2b2;
+
+  width: 100%;
+  thead tr {
+    width: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  th:nth-child(n) {
+    width: 80px;
+  }
+  th:nth-child(1) {
+    text-align: left;
   }
 `;
