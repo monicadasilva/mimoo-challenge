@@ -27,7 +27,7 @@ export const SponsorsPage = () => {
           </Breadcrumb>
         </div>
         {!addSponsor && <MainTable handleAddSponsor={handleAddSponsor} />}
-        {addSponsor && <NewSponserInfo />}
+        {addSponsor && <NewSponserInfo handleAddSponsor={handleAddSponsor} />}
       </Content>
     </Container>
   );

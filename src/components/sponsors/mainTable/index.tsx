@@ -5,10 +5,7 @@ import { getSponsors } from "../../../redux/actions/sponsors";
 import { iSponsorData } from "../../../redux/types";
 import { HiPlus } from "react-icons/hi";
 import { TableDataCard } from "../tableDataCard";
-
-interface iHandler {
-  handleAddSponsor: () => void;
-}
+import { iHandler } from "../../../types/globalTypes";
 
 export const MainTable = ({ handleAddSponsor }: iHandler) => {
   const dispatch = useDispatch();

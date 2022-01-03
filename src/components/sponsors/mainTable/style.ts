@@ -18,8 +18,8 @@ export const Container = styled.div`
   }
 
   button {
-    position: relative;
-    transform: translate(670px, 70px);
+    position: fixed;
+    transform: translate(695px, 150px);
 
     cursor: pointer;
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
         display: initial;
       }
       font-size: 1.5rem;
-      transform: translate(525px, 70px);
+      transform: translate(545px, 150px);
       width: 190px;
       svg {
         width: 15px;
