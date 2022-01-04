@@ -8,6 +8,7 @@ import {
   Input,
   message,
   Steps,
+  Alert,
 } from "antd";
 
 import { Container } from "./styles";
@@ -21,6 +22,8 @@ import {
 } from "react-icons/fa";
 import { iHandler } from "../../../../types/globalTypes";
 import { useState } from "react";
+
+import { SponsorBrandList } from "../sponsorBrands";
 
 const { Step } = Steps;
 
@@ -59,14 +62,18 @@ const props = {
 };
 
 const normFile = (e: any) => {
-  console.log("Upload event:", e);
   if (Array.isArray(e)) {
     return e;
   }
   return e && e.fileList;
 };
 
-export const NewSponserInfo = ({ handleAddSponsor }: iHandler) => {
+export const NewSponserInfo = ({
+  handleAddSponsor,
+  handleShowList,
+  checked,
+  handleRemove,
+}: iHandler) => {
   const [current, setCurrent] = useState(0);
   const [formData, setFormData] = useState([{}]);
 
@@ -82,7 +89,7 @@ export const NewSponserInfo = ({ handleAddSponsor }: iHandler) => {
   };
   const onFinish = (values: any) => {
     setFormData([...formData, values]);
-    console.log("Received values of form: ", formData);
+
     if (current < 2) {
       handleNext();
     }
@@ -152,12 +159,12 @@ export const NewSponserInfo = ({ handleAddSponsor }: iHandler) => {
                     <Input placeholder="Saldo de pontos" />
                   </Form.Item>
                   <div className="switchs">
-                    <Form.Item name="situation" valuePropName="unchecked">
+                    <Form.Item name="situation" valuePropName="checked">
                       <p>
                         Prospect? <Switch size="small" />
                       </p>
                     </Form.Item>
-                    <Form.Item name="certified" valuePropName="unchecked">
+                    <Form.Item name="certified" valuePropName="checked">
                       <p>
                         Homologada? <Switch size="small" />
                       </p>
@@ -200,7 +207,9 @@ export const NewSponserInfo = ({ handleAddSponsor }: iHandler) => {
               </Form.Item>
               <Form.Item
                 name="accountPlan"
-                rules={[{ required: true, message: "Please pick an item!" }]}
+                rules={[
+                  { required: true, message: "Por favor escolha uma opção!" },
+                ]}
               >
                 <Radio.Group className="radios">
                   <Radio.Button value="PRE_PAID">
@@ -216,21 +225,99 @@ export const NewSponserInfo = ({ handleAddSponsor }: iHandler) => {
             </div>
           </>
         )}
+        <div className="secondFrom">
+          {current === 1 && (
+            <>
+              <Form.Item>
+                <span>Informações gerais</span>
+              </Form.Item>
+              <Form.Item
+                name="contactName"
+                rules={[
+                  {
+                    required: true,
+                    message: "Insira o nome do responsável!",
+                  },
+                ]}
+              >
+                <Input placeholder="Nome" />
+              </Form.Item>
+              <div className="secondPart">
+                <Form.Item
+                  name="contactEmail"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Insira o email do responsável!",
+                    },
+                  ]}
+                >
+                  <Input placeholder="Email" />
+                </Form.Item>
+                <Form.Item
+                  name="contactPhone"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Insira o telefone do responsável!",
+                    },
+                  ]}
+                >
+                  <Input placeholder="Celular" />
+                </Form.Item>
+              </div>
+              <Alert
+                className="alert"
+                type="info"
+                banner
+                message="Esse será o usuário com maiores permissões de acesso ao portal de indústria."
+              />
+            </>
+          )}
+
+          {current === 2 && (
+            <div className="brandsBox">
+              <div className="brandsHead">
+                <h1>Marcas</h1>
+                <button onClick={handleShowList}>Vincular marcas</button>
+              </div>
+              <div>
+                {!checked ? (
+                  <div className="message">
+                    <p>Nenhuma marca selecionada</p>
+                  </div>
+                ) : (
+                  <div>
+                    <SponsorBrandList
+                      handleShowList={handleShowList}
+                      handleRemove
+                      checked={checked}
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
         <div className="btns">
           {current < 2 && (
-            <Form.Item>
+            <Form.Item className="buttonBox">
               <Button className="cancel" onClick={handlePrevious}>
                 Cancelar
               </Button>
-              <Button htmlType="submit">Próximo</Button>
+              <Button className="submit" htmlType="submit">
+                Próximo
+              </Button>
             </Form.Item>
           )}
           {current >= 2 && (
-            <Form.Item>
+            <Form.Item className="buttonBox">
               <Button className="cancel" onClick={handlePrevious}>
                 Cancelar
               </Button>
-              <Button htmlType="submit">Cadastrar</Button>
+              <Button className="submit" htmlType="submit">
+                Cadastrar
+              </Button>
             </Form.Item>
           )}
         </div>

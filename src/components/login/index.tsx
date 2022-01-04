@@ -11,7 +11,6 @@ export const LoginForm = () => {
   const navigate = useNavigate();
 
   const onFinish = (values: DataForm) => {
-    console.log("Success:", values);
     navigate("/dashboard");
   };
 

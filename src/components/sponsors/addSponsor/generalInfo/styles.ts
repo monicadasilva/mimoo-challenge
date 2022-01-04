@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 90%;
-  height: 600px;
+ width:950px;
+  height: 700px;
 
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
 
   padding: 15px;
+
+  input {
+        height: 40px;
+        border-radius: 10px;
+      }
   .steps{
     max-width: 500px;
     margin:auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .main {
     width: 100%;
@@ -22,8 +27,8 @@ export const Container = styled.div`
     margin-top: -15px;
 
     .dragger {
-      max-width: 156px;
-      height: 140px;
+      max-width: 176px;
+      height: 160px;
       align-self: flex-start;
       border-color: #6876f7;
       border-radius: 10px;
@@ -42,10 +47,7 @@ export const Container = styled.div`
       flex: 1;
       margin-left: 20px;
 
-      input {
-        height: 40px;
-        border-radius: 10px;
-      }
+     
     }
     .subForm {
       display: flex;
@@ -54,13 +56,13 @@ export const Container = styled.div`
       flex-wrap: wrap;
 
       input {
-        width: 250px;
+        width: 320px;
       }
       .switchs {
-        width: 45%;
+        width: 300px;
         display: flex;
         justify-content: space-between;
-        margin-top: -10px;
+        margin-top: -5px;
       }
     }
   }
@@ -68,7 +70,7 @@ export const Container = styled.div`
     .radios {
       margin-top: -10px;
       label {
-        margin-right: 10px;
+        margin-right: 50px;
         border-radius: 5px;
         height: 40px;
         color: #b2b2b2;
@@ -96,11 +98,16 @@ export const Container = styled.div`
     }
   }
   .btns{
-    .ant-form-item-control-input-content{
-      width: 700px;
+    .buttonBox{
+      width: 900px;
+
       display:flex;
       justify-content: space-between;
-      margin-top:60px;
+
+      position: absolute;
+
+      bottom: 0px;
+
     }
     button{
       width: 100px;
@@ -121,6 +128,11 @@ export const Container = styled.div`
     font-size: 0.8rem;
     
   }
+  .submit{
+    position: absolute;
+
+    right:-20px;
+  }
   button:nth-child(2){
     background-color:#00c2a3;
     
@@ -128,4 +140,73 @@ export const Container = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
   }
+.secondFrom{
+      max-width:950px;
+  .secondPart{
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    input{
+      width: 400px;
+    }
+  }
+
+  .alert{
+    background-color: transparent;
+    svg{
+      color: red;
+    }
+        .ant-alert-message{
+      color: red;
+    }
+  }
+}
+
+.brandsBox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .brandsHead{
+    width: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    h1{
+      font-size:1.2rem;
+      font-weight: 600;
+    }
+    button{
+      
+      width: 130px;
+      height: 30px;
+      border-radius: 5px;
+
+      background-color: transparent;
+      border: 1px solid #6876f7;
+
+      color: #6876f7;
+
+      cursor: pointer;
+
+    }
+  }
+  .message{
+    width: 90%;
+    height: 200px;
+    background-color: #dfdfdf;
+
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 `;

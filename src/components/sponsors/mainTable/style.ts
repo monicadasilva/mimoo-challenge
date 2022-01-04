@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 750px;
-  height: 500px;
+  width: 100%;
+  max-width: 950px;
+  height: 700px;
 
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
 
   position: relative;
-  transform: translate(0, -35px);
+  transform: translate(0, -25px);
 
   padding: 15px;
 
@@ -18,13 +19,15 @@ export const Container = styled.div`
   }
 
   button {
-    position: fixed;
-    transform: translate(695px, 150px);
+    position: absolute;
+
+    bottom: -80px;
+    right: 10px;
 
     cursor: pointer;
 
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 
     border-radius: 30px;
     border: none;
@@ -32,6 +35,7 @@ export const Container = styled.div`
     color: white;
 
     ::after {
+      position: relative;
       display: none;
       vertical-align: middle;
       content: "Adicionar patrocinador";
@@ -42,8 +46,7 @@ export const Container = styled.div`
       ::after {
         display: initial;
       }
-      font-size: 1.5rem;
-      transform: translate(545px, 150px);
+      font-size: 1.8rem;
       width: 190px;
       svg {
         width: 15px;
@@ -55,20 +58,19 @@ export const Container = styled.div`
 `;
 
 export const TableHead = styled.table`
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
 
   color: #b2b2b2;
 
   width: 100%;
   thead tr {
-    width: 710px;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   th:nth-child(n) {
-    width: 80px;
+    width: 100px;
   }
   th:nth-child(1) {
     text-align: left;

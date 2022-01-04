@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TableBox = styled.div`
-  width: 710px;
+  width: 100%;
   border: 1px solid #dfdfdf;
   border-radius: 15px;
   margin: 20px 0 20px 0;
@@ -12,20 +12,34 @@ export const TableBox = styled.div`
   font-weight: 400;
 
   tbody tr {
-    width: 700px;
     height: 35px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   td {
     vertical-align: middle;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   td:nth-child(n) {
-    width: 80px;
+    width: 125px;
   }
   td:nth-child(1) {
     text-align: left;
+    margin-left: 5px;
+  }
+  .ACTIVED {
+      background-color:#00c2a3;
+      color: white;
+      border-radius: 5px;
+      line-height: 1.5rem;
+    }
+
+    .INACTIVED {
+      background-color:#3a3a3a;
+      color: white;
+      border-radius: 5px;
+      line-height: 1.5rem;
+    }
   }
 `;

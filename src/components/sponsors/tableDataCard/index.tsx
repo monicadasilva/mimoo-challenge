@@ -19,8 +19,12 @@ export const TableDataCard = ({
           {certified ? <td>Sim</td> : <td>Não</td>}
           <td>{totalBrands}</td>
           <td>{totalActivedBrands}</td>
-          <td>{lastCampaign}</td>
-          <td>{status}</td>
+          <td>{lastCampaign !== null ? lastCampaign : "N/A"}</td>
+          {status === "ACTIVED" ? (
+            <td className={status}>Ativo</td>
+          ) : (
+            <td className={status}>{status !== null ? "Inativo" : "N/A"}</td>
+          )}
         </tr>
       </tbody>
     </TableBox>

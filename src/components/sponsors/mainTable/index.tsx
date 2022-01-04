@@ -9,6 +9,7 @@ import { iHandler } from "../../../types/globalTypes";
 
 export const MainTable = ({ handleAddSponsor }: iHandler) => {
   const dispatch = useDispatch();
+
   const sponsorList = useSelector((state: any) => state.sponsors.sponsors);
   const loading = useSelector((state: any) => state.sponsors.loading);
   const error = useSelector((state: any) => state.sponsors.error);
@@ -37,6 +38,7 @@ export const MainTable = ({ handleAddSponsor }: iHandler) => {
       {sponsorList.length > 0 &&
         sponsorList.map((elem: iSponsorData, index: number) => (
           <TableDataCard
+            key={elem.name}
             index={index}
             name={elem.name}
             situation={elem.situation}
