@@ -53,7 +53,7 @@ export const MainTable = ({ handleAddSponsor }: iHandler) => {
         <p>Não há patrocinadores cadastrados.</p>
       )}
       {error && !loading && <p>{error}</p>}
-      <button onClick={handleAddSponsor}>
+      <button name="addSponsor" onClick={handleAddSponsor}>
         <HiPlus />
       </button>
     </Container>

@@ -31,7 +31,7 @@ export const LoginForm = () => {
               },
             ]}
           >
-            <Input placeholder="Email" />
+            <Input name="email" placeholder="Email" />
           </Form.Item>
           <Form.Item
             name="password"
@@ -42,7 +42,7 @@ export const LoginForm = () => {
               },
             ]}
           >
-            <Input type="password" placeholder="Senha" />
+            <Input name="password" type="password" placeholder="Senha" />
           </Form.Item>
           <p onClick={handlePasswordChange}>Esqueceu a senha?</p>
           <Form.Item>
@@ -58,7 +58,7 @@ export const LoginForm = () => {
             Digite seu email para receber o link de recuperação, caso seja um
             email cadastrado
           </p>
-          <Input placeholder="Email" />
+          <Input name="email" placeholder="Email" />
           <Button
             onClick={handlePasswordChange}
             type="primary"

@@ -133,7 +133,7 @@ export const NewSponserInfo = ({
                     },
                   ]}
                 >
-                  <Input placeholder="Empresa" />
+                  <Input name="name" placeholder="Empresa" />
                 </Form.Item>
                 <div className="subForm">
                   <Form.Item
@@ -145,7 +145,7 @@ export const NewSponserInfo = ({
                       },
                     ]}
                   >
-                    <Input placeholder="CNPJ" />
+                    <Input name="cnpj" placeholder="CNPJ" />
                   </Form.Item>
                   <Form.Item
                     name="points"
@@ -156,7 +156,7 @@ export const NewSponserInfo = ({
                       },
                     ]}
                   >
-                    <Input placeholder="Saldo de pontos" />
+                    <Input name="points" placeholder="Saldo de pontos" />
                   </Form.Item>
                   <div className="switchs">
                     <Form.Item name="situation" valuePropName="checked">
@@ -180,21 +180,23 @@ export const NewSponserInfo = ({
               </Form.Item>
               <Form.Item
                 name="accountType"
-                rules={[{ required: true, message: "Please pick an item!" }]}
+                rules={[
+                  { required: true, message: "Por favor escolha uma opção!" },
+                ]}
               >
                 <Radio.Group className="radios">
-                  <Radio.Button value="INDUSTRY">
+                  <Radio.Button name="industry" value="INDUSTRY">
                     {" "}
                     <FaIndustry />
                     Indústria{" "}
                   </Radio.Button>
-                  <Radio.Button value="RETAIL">
+                  <Radio.Button name="retail" value="RETAIL">
                     <FaShoppingBag /> Varejo{" "}
                   </Radio.Button>
-                  <Radio.Button value="SHOPPING">
+                  <Radio.Button name="shopp" value="SHOPPING">
                     <FaShoppingCart /> Shopping{" "}
                   </Radio.Button>
-                  <Radio.Button value="AGENCY">
+                  <Radio.Button name="agency" value="AGENCY">
                     {" "}
                     <FaBuilding /> Agência
                   </Radio.Button>
@@ -212,12 +214,12 @@ export const NewSponserInfo = ({
                 ]}
               >
                 <Radio.Group className="radios">
-                  <Radio.Button value="PRE_PAID">
+                  <Radio.Button name="prepaid" value="PRE_PAID">
                     {" "}
                     <FaMoneyBillAlt />
                     Pré-pago{" "}
                   </Radio.Button>
-                  <Radio.Button value="POS_PAID">
+                  <Radio.Button name="pospaid" value="POS_PAID">
                     <FaCreditCard /> Pós-pago{" "}
                   </Radio.Button>
                 </Radio.Group>
@@ -240,7 +242,7 @@ export const NewSponserInfo = ({
                   },
                 ]}
               >
-                <Input placeholder="Nome" />
+                <Input name="contactName" placeholder="Nome" />
               </Form.Item>
               <div className="secondPart">
                 <Form.Item
@@ -252,7 +254,7 @@ export const NewSponserInfo = ({
                     },
                   ]}
                 >
-                  <Input placeholder="Email" />
+                  <Input name="contactEmail" placeholder="Email" />
                 </Form.Item>
                 <Form.Item
                   name="contactPhone"
@@ -263,7 +265,7 @@ export const NewSponserInfo = ({
                     },
                   ]}
                 >
-                  <Input placeholder="Celular" />
+                  <Input name="contactPhone" placeholder="Celular" />
                 </Form.Item>
               </div>
               <Alert
@@ -279,7 +281,9 @@ export const NewSponserInfo = ({
             <div className="brandsBox">
               <div className="brandsHead">
                 <h1>Marcas</h1>
-                <button onClick={handleShowList}>Vincular marcas</button>
+                <button name="brands" onClick={handleShowList}>
+                  Vincular marcas
+                </button>
               </div>
               <div>
                 {!checked ? (
@@ -302,20 +306,20 @@ export const NewSponserInfo = ({
         <div className="btns">
           {current < 2 && (
             <Form.Item className="buttonBox">
-              <Button className="cancel" onClick={handlePrevious}>
+              <Button className="cancel" name="cancel" onClick={handlePrevious}>
                 Cancelar
               </Button>
-              <Button className="submit" htmlType="submit">
+              <Button className="submit" name="submit" htmlType="submit">
                 Próximo
               </Button>
             </Form.Item>
           )}
           {current >= 2 && (
             <Form.Item className="buttonBox">
-              <Button className="cancel" onClick={handlePrevious}>
+              <Button className="cancel" name="cancel" onClick={handlePrevious}>
                 Cancelar
               </Button>
-              <Button className="submit" htmlType="submit">
+              <Button className="submit" name="submit" htmlType="submit">
                 Cadastrar
               </Button>
             </Form.Item>

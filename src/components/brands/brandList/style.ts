@@ -17,7 +17,26 @@ export const Container = styled.div`
 
   top: 0;
   left: 0;
+  button{
+    background-color: red;
+    border: none;
+    width:80px;
+    height:80px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 200px;
+    cursor: pointer;
 
+    svg{
+      width:40px;
+      height:40px;
+      cursor: pointer;
+
+    }
+
+  }
 
   .headBrands {
     width: 100%;
@@ -41,11 +60,7 @@ export const Container = styled.div`
 
   }
   .icon{
-    width:50px;
-    height:50px;
-    position: absolute;
-    right: 200px;
-    cursor: pointer;
+   
   }
 
   table {
