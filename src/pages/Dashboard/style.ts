@@ -19,18 +19,18 @@ export const AnimationBox = styled.div`
 
   h1 {
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
   }
   div:nth-child(1) {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 
     width: 250px;
 
     align-self: flex-start;
     position: absolute;
-    transform: translate(50px, -120px);
+    transform: translate(50px, -200px);
 
     a {
       color: black;

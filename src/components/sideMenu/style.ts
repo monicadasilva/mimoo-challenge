@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 200px;
+  width: 250px;
   height: 100vh;
 
   display: flex;
@@ -27,6 +27,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: flex-start;
     margin-top: 10px;
+
+    font-size: 1.1rem;
     .icon {
       width: 15px;
       height: 15px;
@@ -35,17 +37,19 @@ export const Container = styled.div`
   }
   .Logout {
     width: 100%;
-    font-size: 1rem;
-    button {
-      margin-left: 20px;
+    font-size: 1.1rem;
+    a {
+      margin-right: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: none;
       border: none;
+      cursor: pointer;
     }
 
-    transform: translate(50px, 550px);
-    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    left: 70px;
   }
 `;

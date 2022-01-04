@@ -2,8 +2,8 @@ import "antd/dist/antd.css";
 import { Form, Input, Button } from "antd";
 import { Container, Recovery } from "./style";
 import { useNavigate } from "react-router-dom";
-import { DataForm } from "../../types/AuthContext";
 import { useState } from "react";
+import { DataForm } from "../../types/globalTypes";
 
 export const LoginForm = () => {
   const [passwordRecovery, setPasswordRecovery] = useState(true);
@@ -11,7 +11,6 @@ export const LoginForm = () => {
   const navigate = useNavigate();
 
   const onFinish = (values: DataForm) => {
-    console.log("Success:", values);
     navigate("/dashboard");
   };
 

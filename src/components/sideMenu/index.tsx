@@ -18,7 +18,7 @@ export const SidebarMenu = () => {
         <Link to="/sponsors">Patrocinadores</Link>
       </div>
       <div className="Logout">
-        <button>unserName</button>
+        <Link to="/">unserName</Link>
         <FiLogOut />
       </div>
     </Container>
