@@ -36,7 +36,7 @@ export const Container = styled.div`
     }
   }
   .Logout {
-    width: 100%;
+    width: 250px;
     font-size: 1.1rem;
     a {
       margin-right: 10px;

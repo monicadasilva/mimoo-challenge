@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TableBox = styled.div`
   width: 100%;
   border: 1px solid #dfdfdf;
+
   border-radius: 15px;
   margin: 20px 0 20px 0;
   padding: 5px;
@@ -41,5 +42,29 @@ export const TableBox = styled.div`
       border-radius: 5px;
       line-height: 1.5rem;
     }
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 700px;
+
+    tbody tr {
+    height: 25px;
+ 
+
+  }
+  td{
+    font-size: 0.9rem;
+  }
+  td:nth-child(n) {
+    width: 92px;
+  }
+  .ACTIVED {
+      line-height: 1rem;
+    }
+
+    .INACTIVED {
+
+      line-height: 1rem;
+    }
+  }
   }
 `;

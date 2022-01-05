@@ -44,4 +44,7 @@ export const TableBox = styled.div`
       }
     }
   }
+  @media screen and (max-width: 1024px) {
+    margin: 5px 0 5px 0;
+  }
 `;

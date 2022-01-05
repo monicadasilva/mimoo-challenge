@@ -55,6 +55,18 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 750px;
+    height: 350px;
+    transform: translate(0, 25px);
+
+    button {
+      bottom: -35px;
+      height: 40px;
+      width: 40px;
+    }
+  }
 `;
 
 export const TableHead = styled.table`
@@ -74,5 +86,14 @@ export const TableHead = styled.table`
   }
   th:nth-child(1) {
     text-align: left;
+  }
+  th:nth-child(7) {
+    text-align: left;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 750px;
+    height: fit-content;
+
+    font-size: 0.8rem;
   }
 `;

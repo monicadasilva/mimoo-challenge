@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 
   margin: 0 auto;
 
@@ -18,7 +19,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   button{
-    background-color: red;
+    background-color: transparent;
     border: none;
     width:80px;
     height:80px;
@@ -59,9 +60,7 @@ export const Container = styled.div`
     }
 
   }
-  .icon{
-   
-  }
+
 
   table {
     width: 100%;
@@ -94,5 +93,6 @@ export const Container = styled.div`
         }
       }
     }
-    
+    @media screen and (max-width: 1024px) {
+    }
 `;

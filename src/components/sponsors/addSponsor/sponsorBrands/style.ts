@@ -35,7 +35,7 @@ export const Container = styled.div`
 
         color: #b2b2b2;
         th:nth-child(n) {
-          width:150px;
+          width: 150px;
           text-align: left;
         }
         th:nth-child(4) {
@@ -43,17 +43,32 @@ export const Container = styled.div`
         }
       }
     }
-
-  div{
+  }
+  div {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    .icon{
-     position: absolute;
-     right: 50px;
-     cursor: pointer;
+    .icon {
+      position: absolute;
+      right: 50px;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 300px;
+
+    table {
+      margin-top: -50px;
+      thead {
+        width: 95%;
+        tr {
+          height: 30px;
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 `;

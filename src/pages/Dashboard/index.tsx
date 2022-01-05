@@ -24,7 +24,7 @@ export const DashboardPage = () => {
           <Link to="/dashboard">Dashboard</Link>
           <p>Dashboard</p>
         </div>
-        <Lottie options={defaultOptions} height={400} width={800} />
+        <Lottie options={defaultOptions} height={400} width={600} />
         <h1>Em construção . . .</h1>
       </AnimationBox>
     </Container>
