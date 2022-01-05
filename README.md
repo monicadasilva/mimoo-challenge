@@ -8,6 +8,8 @@
 
 Contém páginas de login, recuperar senha, dashboard, patrocinadores - onde é possível visualiar os patrocinadores cadastrados, adicionar novos patrocinadores e visualizar marcas disponíveis.
 
+https://mimoo-challenge.vercel.app/
+
 [![Pg-Login](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/01.png)]()
 
 [![Pg-dash](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/03.png)]()
