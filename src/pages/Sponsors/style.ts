@@ -8,7 +8,6 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   .header {
     position: absolute;
@@ -48,16 +47,14 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-max-width:900px
-height: 100vh;
+  max-width: 900px;
+  margin: auto;
 
-position: relative;
-right: 4%;
-top: 2%;
-@media screen and (min-width:1300px){
-  right: 30%;
-}
-@media screen and (max-width:1024px){
-max-width:700px
-}
+  @media screen and (min-width: 1300px) {
+    max-width: 950px;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 700px;
+    margin-top: 75px;
+  }
 `;

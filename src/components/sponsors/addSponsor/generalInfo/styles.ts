@@ -211,6 +211,14 @@ align-items: center;
 justify-content: center;
 }
 }
+@media screen and (min-width: 1200px) {
+  .btns{
+position: absolute;
+top: 950px;
+}
+
+}
+
 @media screen and (max-width: 1024px) {
 max-width: 700px;
 max-height: 400px;
@@ -258,7 +266,7 @@ font-size:0.7rem;
 }
 .btns{
 position: absolute;
-bottom: -50px;
+top: 520px;
 .buttonBox{
 max-width: 650px;
 }
