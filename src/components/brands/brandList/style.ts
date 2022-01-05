@@ -29,6 +29,7 @@ export const Container = styled.div`
     justify-content: center;
     right: 200px;
     cursor: pointer;
+    z-index:2;
 
     svg{
       width:40px;

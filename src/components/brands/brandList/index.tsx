@@ -33,7 +33,7 @@ export const BrandList = ({ checked, setChecked, handleShowList }: iProps) => {
     <Container>
       <div>
         <button onClick={handleShowList} name="close">
-          <AiOutlineCloseCircle />
+          <AiOutlineCloseCircle onClick={handleShowList} />
         </button>
 
         <div className="headBrands">
