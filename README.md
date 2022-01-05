@@ -7,3 +7,13 @@
 ### Projeto criado para desafio técnico Mimoo.
 
 Contém páginas de login, recuperar senha, dashboard, patrocinadores - onde é possível visualiar os patrocinadores cadastrados, adicionar novos patrocinadores e visualizar marcas disponíveis.
+
+[![Pg-Login](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/01.png)]()
+
+[![Pg-dash](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/03.png)]()
+
+[![Pg-sponsor](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/04.png)]()
+
+[![Pg-sponsor](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/05.png)]()
+
+[![Pg-sponsor](https://raw.githubusercontent.com/monicadasilva/mimoo-challenge/main/src/assets/readme-img/11.png)]()
