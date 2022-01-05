@@ -47,7 +47,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 900px;
+  max-width: 100%;
   margin: auto;
 
   @media screen and (min-width: 1300px) {

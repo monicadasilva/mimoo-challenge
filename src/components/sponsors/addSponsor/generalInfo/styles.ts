@@ -106,7 +106,7 @@ justify-content: space-between;
 
 position: absolute;
 
-bottom: 0px;
+bottom: 130px;
 
 }
 button{
